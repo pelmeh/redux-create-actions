@@ -2,19 +2,19 @@
 Made actions with namespace 
 
 ## Features
-* Make constains for redux actions (Immutable by modify Object's desctiptors)
+* Make constants for redux actions (Immutable by modify Object's desctiptors)
 * Store page's name 
 * Add prefix
-* Swap prefix and constain (if constaint is wrapped in array)
+* Swap prefix and constant (if constant is wrapped in array)
 * Can be serialized (ex. for websockets)
 
 ## Using
 ### Initialization 
 
-createActions(`prefix`: String, `constaints`: Array, [`pageName`: String, `symbol`: String])
+createActions(`prefix`: String, `constants`: Array, [`pageName`: String, `symbol`: String])
 ### Action file (actions/home.js)
 
-Export constains:
+Export constants:
 
 ```
 export const actions = createActions('HOME_PAGE', [
@@ -48,7 +48,7 @@ export {
 ```
 
 ### Reducer file (reducers/home.js)
-Import constains
+Import constants
 
 ```
 import { actions } from '/actions/'
@@ -71,8 +71,8 @@ page.*action*
 // Page name:
 actions.pageName
 
-// Page constaints:
-actions.*constaint*
+// Page constants:
+actions.*constant*
 ```
 Redux mapDispatchToProps: 
 ```
